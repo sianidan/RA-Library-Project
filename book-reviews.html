@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Twice as Hard" Customer Reviews - Gold Peach County Library</title>
+
+    <!-- FONTS & ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="mobile-header">
+            <button type="submit" title="navigation menu" class="hamburger-menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul class="mobile-nav">
+                <li>
+                    <a href="#">Residents</a>
+                </li>
+                <li>
+                    <a href="#">Location & Hours</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./booklist.html">Books & More</a>
+                </li>
+                <li>
+                    <a href="./account.html">My Account</a>
+                </li>
+                <li>
+                    <a href="./checkout.html">My Cart</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="./index.html">
+                <h2>GOLDPEACH<span class="thinner">COUNTY</span></h2>
+                <p>VIRGINIA</p>
+            </a>
+        </div>
+        <nav class="desktop-nav">
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Residents</a>
+                </li>
+                <li>
+                    <a href="#">Location & Hours</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./booklist.html">Books & More</a>
+                </li>
+                <li>
+                    <a href="./account.html">My Account</a>
+                </li>
+                <li>
+                    <a href="./checkout.html">My Cart</a>
+                </li>
+            </ul>
+        </nav>    
+            <!-- search bar; change to action="search" when implementing backend -->
+        <form action="./search.html" label="search" aria-labelledby="search">
+            <input type="search" placeholder="Search..." id="search">
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+    </header>
+    
+    <main class="book-reviews">
+        <section class="left">
+            <div>
+                <h1>Customer Reviews</h1>
+                <div class="overall-rating flex-horizontal">
+                    <img src="./images/stars.svg" alt="rating out of 5 stars">
+                    <span>4 out of 5</span>
+                </div>
+                <p class="total-ratings">13,754 global ratings</p>
+            </div>
+            <div class="ratings-bar">
+                <label for="five-stars">5 Stars</label>
+                <progress id="five-stars" max="100" value="79"></progress>
+                <p>79%</p>
+            </div>
+            <div class="ratings-bar">
+                <label for="four-stars">4 Stars</label>
+                <progress id="four-stars" max="100" value="9"></progress>
+                <p>9%</p>
+            </div>
+            <div class="ratings-bar">
+                <label for="three-stars">3 Stars</label>
+                <progress id="three-stars" max="100" value="2"></progress>
+                <p>2%</p>
+            </div>
+            <div class="ratings-bar">
+                <label for="two-stars">2 Stars</label>
+                <progress id="two-stars" max="100" value="0"></progress>
+                <p>0%</p>
+            </div>
+            <div class="ratings-bar">
+                <label for="one-star">1 Star</label>
+                <progress id="one-star" max="100" value="0"></progress>
+                <p>0%</p>
+            </div>
+
+            <!-- Write a Review button -->
+            <button type="button" class="review-btn btn">Write a Review</button>
+        </section>
+        
+        <section class="reviews-right double-space">
+            <div class="reviews-right-top flex-horizontal">
+                <img src="./images/TwiceAsHard.svg" alt="Twice as Hard by Jasmine Brown" class="reviews-cover">
+                <div class="book-title">
+                    <h2><a href="./book-description.html" class="underline-link">Twice as Hard: The Stories of Black Women Who Fought to Become Physicians, from the Civil War to the 21st Century.</a></h2>
+                    <p>By <a href="#" class="blue-link">Jasmine Brown</a></p>
+                </div>
+            </div>
+
+            <div class="reviews-right-bottom">
+                <h3>Top positive review</h3>
+                <p><a href="#" class="blue-link">All positive reviews ></a></p>
+                <div class="reviews-user flex-horizontal">
+                    <img src="./images/iconmonstr-user-20.svg" alt="user profile picture">
+                    <p>thecatlady444</p>
+                </div>
+                <div class="reviews-date">
+                    <p>Reviewed in the United States 🇺🇸 on January 9, 2023</p>
+                    <div class="flex-horizontal">
+                        <img src="./images/stars5.svg" alt="5-star rating">
+                        <p class="review-title"><strong>A Book to Remember!</strong></p>
+                    </div>
+                </div>
+                <p class="review-content">This was an amazing book. I learned so much with each page. I highly recommend this book if you are into history and want to get down to the nitty gritty and often hard truths. Happy reading!</p>
+                <div class="helpful">
+                    <button type="submit" id="thumbs-up">Thumbs up</button>
+                    <label for="thumbs-up">5 people found this helpful</label>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

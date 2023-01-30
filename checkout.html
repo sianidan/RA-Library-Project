@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out - Gold Peach County Library</title>
+
+    <!-- FONTS & ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="mobile-header">
+            <button type="submit" title="navigation menu" class="hamburger-menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul class="mobile-nav">
+                <li>
+                    <a href="#">Residents</a>
+                </li>
+                <li>
+                    <a href="#">Location & Hours</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./booklist.html">Books & More</a>
+                </li>
+                <li>
+                    <a href="./account.html">My Account</a>
+                </li>
+                <li>
+                    <a href="./checkout.html">My Cart</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="./index.html">
+                <h2>GOLDPEACH<span class="thinner">COUNTY</span></h2>
+                <p>VIRGINIA</p>
+            </a>
+        </div>
+        <nav class="desktop-nav">
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Residents</a>
+                </li>
+                <li>
+                    <a href="#">Location & Hours</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./booklist.html">Books & More</a>
+                </li>
+                <li>
+                    <a href="./account.html">My Account</a>
+                </li>
+                <li>
+                    <a href="./checkout.html">My Cart</a>
+                </li>
+            </ul>
+        </nav>    
+            <!-- search bar; change to action="search" when implementing backend -->
+        <form action="./search.html" label="search" aria-labelledby="search">
+            <input type="search" placeholder="Search..." id="search">
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+    </header>
+    
+    <main class="my-cart">
+        <section class="checkout-left">
+            <h1 class="serif">One last step before your journey!</h1>
+            <form action="./confirmation.html" method="get" class="checkout">
+                <div>
+                    <div class="contact-info checkout-grid">
+                        <label for="email" class="bold">Contact Information</label>
+                        <p>Already have an account? <a href="./account.html" class="bold">Log in</a></p>
+                    </div>
+                    <div>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <input type="checkbox" name="send me email updates" id="updates">
+                        <label for="updates">Send me library updates</label>
+                    </div>
+                </div>
+                
+                <!-- First and Last name -->
+                
+                <div class="checkout-grid">
+                    <div>
+                        <label for="firstName" class="visually-hidden">First Name</label>
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                    </div>
+    
+                    <div>
+                        <label for="lastName" class="visually-hidden">Last Name</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div>
+                    <label for="address" class="visually-hidden">Address</label>
+                    <input type="text" name="address" id="address" placeholder="Address" required>
+                </div>
+
+                <div>
+                    <label for="address2" class="visually-hidden">Address 2 (optional)</label>
+                    <input type="text" name="address2" id="address2" placeholder="Address 2 (optional)">
+                </div>
+
+               <div>
+                    <label for="city" class="visually-hidden">City</label>
+                    <input type="text" name="city" id="city" placeholder="City" required>
+               </div>
+
+                <div class="checkout-grid">
+                    <div>
+                        <label for="state" class="visually-hidden">State</label>
+                        <input type="text" name="state" id="state" placeholder="State" required>
+                    </div>
+    
+                    <div>
+                        <label for="zip" class="visually-hidden">Zip Code</label>
+                        <input type="text" name="zip code" id="zip" placeholder="Zip Code" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="phone" class="visually-hidden">Phone (optional)</label>
+                    <input type="tel" name="phone" id="phone" placeholder="xxx-xxx-xxxx">
+                </div>
+
+                <!-- Check out button; redirects to confirmation page -->
+                <form action="./confirmation.html"><button type="submit" class="checkout-btn btn">Check Out</button></form>
+            </form>
+            <nav class="go-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                    <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/>
+                </svg>
+                <a href="./book-description.html" class="underline-link">Back</a>
+            </nav>
+        </section>
+        <section class="checkout-right">
+            <div class="checkout-summary">
+                <h2>Twice as Hard: The Stories of Black Women Who Fought to Become Physicians, from the Civil War to the 21st Century.</h2>
+                <div class="flex-horizontal">
+                    <div class="checkout-summary-book">
+                        <img src="./images/TwiceAsHard.svg" alt="Twice as Hard by Jasmine Brown">
+                        <p>By Jasmine Brown</p>
+                    </div>
+                    <div class="checkout-summary-info">
+                        <div>
+                            <p>Published by Beacon Press</p>
+                            <p>Jan 24, 2023 | 240 pages | 6 x 9</p>
+                            <p>IBSN 9780807025086</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="red">*Please make sure to pick up all library orders within 48 hrs or they will be returned.</p>
+        </section>
+    </main>
+</body>
+</html>

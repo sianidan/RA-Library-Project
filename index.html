@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Gold Peach County Library</title>
+
+    <!-- FONTS & ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+
+</head>
+<body class="home">
+    <header class="header">
+        <nav class="mobile-header">
+            <button type="submit" title="navigation menu" class="hamburger-menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul class="mobile-nav">
+                <li>
+                    <a href="#">Residents</a>
+                </li>
+                <li>
+                    <a href="#">Location & Hours</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./booklist.html">Books & More</a>
+                </li>
+                <li>
+                    <a href="./account.html">My Account</a>
+                </li>
+                <li>
+                    <a href="./checkout.html">My Cart</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="./index.html">
+                <h2>GOLDPEACH<span class="thinner">COUNTY</span></h2>
+                <p>VIRGINIA</p>
+            </a>
+        </div>
+        <nav class="desktop-nav">
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Residents</a>
+                </li>
+                <li>
+                    <a href="#">Location & Hours</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./booklist.html">Books & More</a>
+                </li>
+                <li>
+                    <a href="./account.html">My Account</a>
+                </li>
+                <li>
+                    <a href="./checkout.html">My Cart</a>
+                </li>
+            </ul>
+        </nav>    
+            <!-- search bar; change to action="search" when implementing backend -->
+        <form action="./search.html" label="search" aria-labelledby="search">
+            <input type="search" placeholder="Search..." id="search">
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+    </header>
+
+    <main class="main-home">
+        <div class="landing-top">
+            <p>BECAUSE LIBRARIES = STRONG COMMUNITIES.</p>
+        </div>
+        <div class="landing-middle">
+            <div class="landing-img1"></div>
+            <div class="landing-img2"></div>
+            <section class="landing-contact">
+                <h2>CONTACT INFORMATION:</h2>
+                <p><strong>Hours:</strong> 8AM - 4:30PM M-F. Branch hours may vary. Please call your branch's direct line with account & ebook questions.</p>
+                <div class="phone-number">
+                   <img src="./images/iconmonstr-smartphone-3.svg" alt="phone">
+                   <p>123-456-7890 | T 804</p> 
+                </div>
+                <div class="email">
+                    <img src="./images/iconmonstr-email-2.svg" alt="email">
+                    <p>library@goldpeachcounty.gov</p>
+                </div>
+                <div class="address">
+                    <img src="./images/iconmonstr-location.svg" alt="location">
+                    <p>12000 Peachland Dr., Suite 444, Peachland, VA 12345</p>
+                </div>
+            </section>
+        </div>
+        <div class="landing-bottom">
+            <h2>Welcome to the Gold Peach County Library website!</h2>
+            <p>We strive to make a positive impact on the community and offer literary resources at no cost to you. Please be sure to stop by and say hello to our library staff, and to activate your account to be issued a library card. Hope to see you soon!</p>
+            <div class="staff-login">
+                <a href="#">GPC Staff Login</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

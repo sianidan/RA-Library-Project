@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Gold Peach County Library</title>
+
+    <!-- FONTS & ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="mobile-header">
+            <button type="submit" title="navigation menu" class="hamburger-menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul class="mobile-nav">
+                <li>
+                    <a href="#">Residents</a>
+                </li>
+                <li>
+                    <a href="#">Location & Hours</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./booklist.html">Books & More</a>
+                </li>
+                <li>
+                    <a href="./account.html">My Account</a>
+                </li>
+                <li>
+                    <a href="./checkout.html">My Cart</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="./index.html">
+                <h2>GOLDPEACH<span class="thinner">COUNTY</span></h2>
+                <p>VIRGINIA</p>
+            </a>
+        </div>
+        <nav class="desktop-nav">
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Residents</a>
+                </li>
+                <li>
+                    <a href="#">Location & Hours</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./booklist.html">Books & More</a>
+                </li>
+                <li>
+                    <a href="./account.html">My Account</a>
+                </li>
+                <li>
+                    <a href="./checkout.html">My Cart</a>
+                </li>
+            </ul>
+        </nav>    
+            <!-- search bar; change to action="search" when implementing backend -->
+        <form action="./search.html" label="search" aria-labelledby="search">
+            <input type="search" placeholder="Search..." id="search">
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+    </header>
+
+    <main class="search-pg">
+        <form class="search-results-bar" method="get">
+            <input type="search" name="Search Books" id="search-results-bar" placeholder="Search Results for Stephen King">
+            <div class="filter-dropdown">
+                <form>
+                    <button type="button" class="filter-btn">Filter</button>
+                </form>
+                <div class="dropdown-content">
+                    <p class="filter-by-categories bold">FILTER BY CATEGORIES</p>
+                    <button type="reset">Clear Filters</button>
+                    
+                    <!-- Movies -->
+                    <div>
+                        <input type="checkbox" name="movies" id="movies">
+                        <label for="movies">Movies</label>
+                    </div>
+
+                    <!-- Articles -->
+                    <div>
+                        <input type="checkbox" name="articles" id="articles">
+                        <label for="articles">Articles</label>
+                    </div>
+
+                    <!-- Journals -->
+                    <div>
+                        <input type="checkbox" name="journals" id="journals">
+                        <label for="journals">Journals</label>
+                    </div>
+
+                    <!-- Books -->
+                    <div>
+                        <input type="checkbox" name="books" id="books">
+                        <label for="books">Books</label>
+                    </div>
+
+                    <!-- Audiobooks -->
+                    <div>
+                        <input type="checkbox" name="audiobooks" id="audiobooks">
+                        <label for="audiobooks">Audiobooks</label>
+                    </div>
+
+                    <!-- Textbooks -->
+                    <div>
+                        <input type="checkbox" name="textbooks" id="textbooks">
+                        <label for="textbooks">Textbooks</label>
+                    </div>
+
+                    <!-- E-books -->
+                    <div>
+                        <input type="checkbox" name="ebooks" id="ebooks">
+                        <label for="ebooks">E-books</label>
+                    </div>
+                    
+                    <!-- Apply button -->
+                    <button type="submit">Apply Filters</button>
+                </div>
+            </div>
+        </form>
+    
+        <section class="search-results">
+            <p><a href="#" class="blue-link">Stephen King | The Author</a></p>
+            <p><a href="#" class="blue-link">All the major links in Stephen King's shared movie universe, explained (digitalspy.com)</a></p>
+        </section>
+    
+        <div class="search-books grid">
+            <div class="grid-box">
+                <a href="#"><img src="./images/search1.svg" alt="She's a Man Eater by Stephen King"></a>
+            </div>
+            <div class="grid-box">
+                <a href="#"><img src="./images/search2.svg" alt="Bazaar of Bad Dreams by Stephen King"></a>
+            </div>
+            <div class="grid-box">
+                <a href="#"><img src="./images/search3.svg" alt="End of Watch by Stephen King"></a>
+            </div>
+            <div class="grid-box">
+                <a href="#"><img src="./images/search4.svg" alt="The Waste Lands by Stephen King"></a>
+            </div>
+            <div class="grid-box">
+                <a href="#"><img src="./images/search5.svg" alt="Thinner by Stephen King"></a>
+            </div>
+        </div>
+        
+        <nav class="search-nav" aria-labelledby="page-numbers">
+            <div id="page-numbers">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+                    <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/>
+                </svg>
+
+                <a href="#" class="blue-link">1</a>
+                <a href="#" class="blue-link">2</a>
+                <a href="#" class="blue-link">3</a>
+                <a href="#" class="blue-link">4</a>
+                <a href="#" class="active">5</a>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+                    <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/>
+                </svg>
+            </div>
+        </nav>
+    </main>
+</body>
+</html>

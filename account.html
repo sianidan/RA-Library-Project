@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gold Peach County Library</title>
+
+    <!-- FONTS & ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+</head>
+<body class="account">
+    <header class="header">
+        <nav class="mobile-header">
+            <button type="submit" title="navigation menu" class="hamburger-menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul class="mobile-nav">
+                <li>
+                    <a href="#">Residents</a>
+                </li>
+                <li>
+                    <a href="#">Location & Hours</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./booklist.html">Books & More</a>
+                </li>
+                <li>
+                    <a href="./account.html">My Account</a>
+                </li>
+                <li>
+                    <a href="./checkout.html">My Cart</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="./index.html">
+                <h2>GOLDPEACH<span class="thinner">COUNTY</span></h2>
+                <p>VIRGINIA</p>
+            </a>
+        </div>
+        <nav class="desktop-nav">
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Residents</a>
+                </li>
+                <li>
+                    <a href="#">Location & Hours</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./booklist.html">Books & More</a>
+                </li>
+                <li>
+                    <a href="./account.html">My Account</a>
+                </li>
+                <li>
+                    <a href="./checkout.html">My Cart</a>
+                </li>
+            </ul>
+        </nav>    
+            <!-- search bar; change to action="search" when implementing backend -->
+        <form action="./search.html" label="search" aria-labelledby="search">
+            <input type="search" placeholder="Search..." id="search">
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+    </header>
+
+    <p class="serif welcome">WELCOME!</p>
+    <main class="sign-in-card">
+        <form action="#" method="post" class="card">
+            <div class="top">
+                <h1>Sign into your account</h1>
+                <div class="email">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Email Address*" required>
+                </div>
+    
+                <!-- figure out how to put hide icon inside -->
+                <div class="password">
+                    <label for="password"></label>
+                    <input type="password" name="password" id="password" placeholder="Password*" required>
+                    <div class="password-options">
+                        <div class="keep">
+                            <input type="checkbox" name="checkbox" id="checkbox">
+                            <label for="checkbox">Keep me signed in</label>
+                            <img src="./images/iconmonstr-info-thin.svg" alt="more information icon">
+                        </div>
+                        <div class="forgot-password">
+                            <a class="blue-link" href="#">Forgot Password?</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- sign in button -->
+                <button type="submit" formmethod="post" class="sign-in-btn btn">Sign in</button>
+            </div>
+        </form>
+
+        <hr class="grey">
+
+        <div class="bottom">
+            <div class="create-acct">
+                <h2 id="sign-up">Need to sign up?</h2>
+                <!-- create account button MAKE LINK TO REGISTER PAGE-->
+                <form>
+                    <button type="submit" formaction="./register.html" aria-labelledby="sign-up" class="sign-up-btn btn">Create Account</button>
+                </form>
+            </div>
+            
+            <p class="terms">
+                <a class="blue-link" href="#">Terms of Use</a>
+                &
+                <a class="blue-link" href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </main>
+</body>
+</html>
