@@ -39,7 +39,7 @@ html, body {
     color: rgb(20, 22, 74, 0.65);
 }
 
-/* General styling for buttons */
+/* General styling for buttons and input fields */
 .btn {
     cursor: pointer;
     box-shadow: none;
@@ -52,6 +52,10 @@ html, body {
     transition-property: box-shadow;
     transition-duration: 0.1s;
     box-shadow: 0 0 10px rgba(20, 22, 74, 0.8);
+}
+
+main input:focus {
+    outline-color:rgb(20, 22, 74);
 }
 
 /* Change look of link for current page to stand out */
@@ -101,7 +105,7 @@ header {
 
 .header li {
     list-style-type: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 /* change color of nav links when hovering and when on that particular page */
@@ -137,9 +141,7 @@ header {
     width: 33%;
 }
 
-/* search bar
-    reference: https://nikitahl.com/search-icon-inside-input#:~:text=Create%20a%20search%20icon%20inside%20input%20box%20with,submit%20button%20from%20the%20form.%20...%204%20Demo 
-*/
+/* search bar */
 .header form {
     background-color: white;
     display: flex;
@@ -147,6 +149,14 @@ header {
     border-radius: 1.25rem;
     width: 15%;
     padding-right: 0.5rem;
+}
+
+.home .header form {
+    width: 20%;
+}
+
+.home-icon {
+    width: 20%;
 }
 
 /* makes search input blend with form */
@@ -157,6 +167,7 @@ header {
     color: rgb(20, 22, 74);
     border: 1px solid transparent;
     width: 80%;
+    font-size: 14px;
 }
 
 /* search icon for submit button */
@@ -180,45 +191,6 @@ header {
   border-color: #f8d937;
   border-radius: inherit;
   outline: none;
-}
-
-@media screen and (max-width: 830px) {
-    .header {
-        padding: 0 2% 0 0;
-    }
-    .header input::-webkit-input-placeholder {
-        color: transparent;
-    }
-    .desktop-nav {
-        display: none;
-    }
-    .mobile-header {
-        width: 10%;
-    }
-    .hamburger-menu {
-        width: 100%;
-        display: block;
-    }
-    .mobile-header:focus-within .mobile-nav{
-        display: block;
-        position: absolute;
-    }
-    section.landing-contact > p, .landing-contact div {
-        width: 100%;
-        height: inherit;
-    }
-}
-
-@media screen and (max-width:480px) {
-    .landing-contact h2, .landing-contact p {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (min-width:831px) and (max-width:980px) {
-    .desktop-nav li {
-        font-size: 1rem;
-    }
 }
 
 /* || HOMEPAGE */
@@ -313,7 +285,6 @@ header {
 
 .staff-login {
     width: 100%;
-    text-align: right;
     text-decoration: underline;
     color: white;
     padding-right: 0.5rem;
@@ -472,12 +443,32 @@ hr.title-divider {
     gap: 1.5rem;
 }
 
-.card .top input:not([type="checkbox"]) {
+.card input:not([type="checkbox"]) {
     width: 100%;
     border: 1px solid rgb(184, 181, 181);
     border-radius: 0.3rem;
     padding: 0.8rem;
     font-size: 1.2rem;
+}
+
+.password-container {
+    display: flex;
+    border: 1px solid rgb(184, 181, 181);
+    border-radius: 0.3rem;
+}
+
+.card input[type="password"] {
+    border: 1px solid transparent;
+}
+
+.password-btn {
+    text-indent: -999px;
+    overflow: hidden;
+    cursor: pointer;
+    background: transparent url(../images/showPassword.svg) no-repeat center;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    width: 15%;
 }
 
 .password-options {
@@ -620,7 +611,7 @@ hr.title-divider {
     gap: 1.5rem;
 }
 
-.book-description .left {
+.description-left {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -647,7 +638,7 @@ hr.title-divider {
     background-color: rgba(248, 217, 55, 0.8);
 }
 
-section.right {
+.description-right {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -671,7 +662,6 @@ section.right {
 
 .book-description h1 {
     font-size: 2rem;
-    text-align: center;
     margin: 0;
 }
 
@@ -706,10 +696,6 @@ section.right {
 
 .overall-rating > img {
     width: 60%;
-}
-
-.overall-rating {
-    text-align: right;
 }
 
 .total-ratings {
@@ -925,9 +911,7 @@ progress::-moz-progress-bar {
     margin-bottom: 1rem;
 }
 
-/* hide labels without affecting accessibility
-    https://www.w3.org/WAI/tutorials/forms/labels/#hiding-label-text
- */
+/* hide labels without affecting accessibility */
 .checkout-left .visually-hidden {
     border: 0;
   clip: rect(0 0 0 0);
@@ -947,10 +931,6 @@ progress::-moz-progress-bar {
 
 .bold {
     font-weight: bold;
-}
-
-.checkout-grid p {
-    text-align: right;
 }
 
 .checkout .checkout-btn {
@@ -1015,3 +995,45 @@ progress::-moz-progress-bar {
 }
 
 /* || MEDIA QUERIES */
+
+@media screen and (max-width: 830px) {
+    .header {
+        padding: 0 2% 0 0;
+    }
+    .header input::-webkit-input-placeholder {
+        color: transparent;
+    }
+    .desktop-nav {
+        display: none;
+    }
+    .header > img {
+        display: none;
+    }
+    .mobile-header {
+        width: 10%;
+    }
+    .hamburger-menu {
+        width: 100%;
+        display: block;
+    }
+    .mobile-header:focus-within .mobile-nav{
+        display: block;
+        position: absolute;
+    }
+    section.landing-contact > p, .landing-contact div {
+        width: 100%;
+        height: inherit;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .landing-contact h2, .landing-contact p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:831px) and (max-width:980px) {
+    .desktop-nav li {
+        font-size: 1rem;
+    }
+}

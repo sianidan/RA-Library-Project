@@ -50,7 +50,7 @@
             </a>
         </div>
         <nav class="desktop-nav">
-            <ul class="nav-links">
+            <ul>
                 <li>
                     <a href="#">Residents</a>
                 </li>
@@ -85,10 +85,10 @@
                 <div>
                     <div class="contact-info checkout-grid">
                         <label for="email" class="bold">Contact Information</label>
-                        <p>Already have an account? <a href="./account.html" class="bold">Log in</a></p>
+                        <p class="align-right">Already have an account? <a href="./account.html" class="bold">Log in</a></p>
                     </div>
                     <div>
-                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <input type="email" name="email" id="email" placeholder="Email*" required>
                         <input type="checkbox" name="send me email updates" id="updates">
                         <label for="updates">Send me library updates</label>
                     </div>
@@ -99,19 +99,19 @@
                 <div class="checkout-grid">
                     <div>
                         <label for="firstName" class="visually-hidden">First Name</label>
-                        <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name*" required>
                     </div>
     
                     <div>
                         <label for="lastName" class="visually-hidden">Last Name</label>
-                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name*" required>
                     </div>
                 </div>
 
                 <!-- Address -->
                 <div>
                     <label for="address" class="visually-hidden">Address</label>
-                    <input type="text" name="address" id="address" placeholder="Address" required>
+                    <input type="text" name="address" id="address" placeholder="Address*" required>
                 </div>
 
                 <div>
@@ -121,24 +121,24 @@
 
                <div>
                     <label for="city" class="visually-hidden">City</label>
-                    <input type="text" name="city" id="city" placeholder="City" required>
+                    <input type="text" name="city" id="city" placeholder="City*" required>
                </div>
 
                 <div class="checkout-grid">
                     <div>
                         <label for="state" class="visually-hidden">State</label>
-                        <input type="text" name="state" id="state" placeholder="State" required>
+                        <input type="text" name="state" id="state" placeholder="State*" required>
                     </div>
     
                     <div>
                         <label for="zip" class="visually-hidden">Zip Code</label>
-                        <input type="text" name="zip code" id="zip" placeholder="Zip Code" required>
+                        <input type="text" name="zip code" id="zip" placeholder="Zip Code*" required>
                     </div>
                 </div>
 
                 <div>
                     <label for="phone" class="visually-hidden">Phone (optional)</label>
-                    <input type="tel" name="phone" id="phone" placeholder="xxx-xxx-xxxx">
+                    <input type="tel" name="phone" id="phone" placeholder="Phone Number (optional)">
                 </div>
 
                 <!-- Check out button; redirects to confirmation page -->
