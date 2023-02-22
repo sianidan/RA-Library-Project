@@ -18,7 +18,7 @@ This is my Week 5 Project for the Reskill Americans Full-Stack Program. We were 
 ## Overview
 
 ### Site Details
-So far, the website only appears as intended on desktop browsers as I'm still in the process of adding media queries for responsiveness. 
+The website is now fully responsive, but I may continue to add/alter media queries as the project progresses. 
 
 There are currently 10 different pages:
 - Home Page
@@ -66,7 +66,7 @@ There are currently 10 different pages:
     - I'm still working on adding media queries to make the website responsive, and this is the article that I frequently use to streamline the process.
 
 ## Continued Development
-As of now, this website was built using only HTML5 and vanilla CSS. The first improvements will be making the website fully responsive. 
+As of now, this website was built using only HTML5 and vanilla CSS. 
 
 As my cohort in the Reskill Americans program progresses, we will be revisiting and building upon this project in the following weeks. We will become familiarized with adding JavaScript for the frontend and backend, then implement those acquired skills into this project.
 ### Future intentions for this project

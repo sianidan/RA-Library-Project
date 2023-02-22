@@ -7,7 +7,14 @@
 
 html, body {
     width: 100%;
-    color: rgb(20, 22, 74);
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
 }
 
 .inria {
@@ -138,7 +145,7 @@ header {
     height: 2px;
     position: relative;
     vertical-align: middle;
-    width: 33%;
+    width: 30%;
 }
 
 /* search bar */
@@ -193,14 +200,62 @@ header {
   outline: none;
 }
 
+/* || FOOTER */
+footer {
+    background-color: rgb(20, 22, 74);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    /* position: relative;
+    bottom: 0;
+    width: 100%; WIP */
+}
+
+footer:not(.footer) {
+    margin-top: 10vh;
+}
+
+.sitemap {
+    width: 70%;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+footer li {
+    list-style-type: none;
+    padding-top: 0.5rem;
+}
+
+footer li a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+footer .right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /* || HOMEPAGE */
 .home {
     background-color: rgb(20, 22, 74, 0.8);
 }
 
+.main-home {
+    min-height: 100%;
+}
+
 .landing-top {
     background-color: rgba(248, 217, 55);
-    height: 15vh;
     font-weight: bold;
     font-size: 2.25rem;
     color: white;
@@ -208,37 +263,35 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
 .landing-middle {
     display: flex;
     justify-content: space-between;
-    height: 40vh;
 }
 
-.landing-img1, .landing-img2, .landing-contact {
+.landing-img, .landing-contact {
     width: 33.2%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
-.landing-img1 {
-    background-image: url(../images/home1.svg);
-}
-
-.landing-img2 {
-    background-image: url(../images/home2.svg);
+.landing-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .landing-contact {
     background-color: white;
     background-image: url(../images/home3.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: rgb(20, 22, 74);
     padding: 1rem 1.5rem;
     line-height: 1.5;
     font-size: 1.1rem;
-    width: 33%;
 }
 
 .landing-contact h2 {
@@ -258,15 +311,15 @@ header {
 }
 
 .landing-bottom {
-    height: 35vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     padding: 0 0.5rem;
 }
 
-.landing-bottom h2 {
+.landing-bottom h1 {
     font-size: 3rem;
     color: rgba(248, 217, 55, 0.9);
     font-weight: 300;
@@ -335,25 +388,17 @@ h1.inria {
 .about-left h2 {
     color: rgb(20, 22, 74, 0.7);
     font-size: 1.75rem;
-    transition-property: margin-left;
-    transition-duration: 1s;
 }
 
 .about-left h2:not(.active) {
     font-weight: 400;
 }
 
-/* animate left page links on hover */
-.about-left h2:hover:not(.active) {
-    margin-left: 2rem;
-    color: rgba(20, 22, 74, 1);
-}
-
 .overview-menu {
     background-color: rgba(244, 241, 241, 1);
     width: inherit;
     border-radius: 0.5rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem;
     margin-left: 1rem;
 }
 
@@ -410,8 +455,7 @@ hr.title-divider {
     background-image: url(../images/loginbg.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 110%;
-    margin-bottom: 3rem;
+    background-size: cover;
 }
 
 .serif.welcome {
@@ -423,8 +467,7 @@ hr.title-divider {
 .sign-in-card {
     background-color: white;
     width: 40%;
-    height: min-content;
-    margin: auto;   
+    margin: auto;
     border-radius: 0.5rem;
 }
 
@@ -550,6 +593,10 @@ hr.title-divider {
     gap: 1rem;
 }
 
+.register .name > div {
+    width: 50%;
+}
+
 .register form > div {
     margin: 1rem 0;
 }
@@ -571,16 +618,21 @@ hr.title-divider {
     padding: 2rem 5%;
 }
 
+.book-categories {
+    width: 100%;
+}
+
 .genre-links ul{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 3rem;
+    flex-wrap: wrap;
 }
 
 .genre-links li {
     list-style-type: none;
     font-size: 1.5rem;
+    padding: 0 0.5rem;
 }
 
 .genre-links li a {
@@ -591,10 +643,20 @@ hr.title-divider {
     padding-bottom: 1.25rem;
 }
 
+.book-faves, .all-books {
+    width: 100%;
+}
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
+}
+
+.grid-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .grid-box a img:hover {
@@ -618,19 +680,22 @@ hr.title-divider {
     gap: 1.5rem;
 }
 
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
 .rating {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.book-description form {
-    width: 40%;
-}
-
 .checkout-btn {
     background-color: rgba(248, 217, 55, 1);
-    width: 100%;
+    width: 10rem;
     border: none;
 }
 
@@ -688,7 +753,7 @@ hr.title-divider {
     gap: 1rem;
 }
 
-.book-reviews .left h1 {
+.book-reviews h1 {
     margin: 0;
     font-size: 2.25rem;
     text-align: center;
@@ -736,7 +801,6 @@ progress::-moz-progress-bar {
     border: 2px solid rgb(184, 181, 181);
     background-color: white;
     margin: 1rem 0;
-    width: 40%;
     font-size: 1rem;
 }
 
@@ -746,7 +810,7 @@ progress::-moz-progress-bar {
 }
 
 .reviews-cover {
-    width: 10%;
+    width: 5rem;
 }
 
 .reviews-right-bottom h3 {
@@ -758,7 +822,7 @@ progress::-moz-progress-bar {
 }
 
 .reviews-user img {
-    width: 5%;
+    width: 2rem;
 }
 
 .review-content {
@@ -776,7 +840,7 @@ progress::-moz-progress-bar {
     background: transparent url(../images/iconmonstr-thumb-10.svg) no-repeat center;
     background-size: contain;
     border: 1px solid transparent;
-    width: 2vw;
+    width: 2.5rem;
 }
 
 .helpful button:focus {
@@ -785,6 +849,7 @@ progress::-moz-progress-bar {
 
 /* || SEARCH PAGE */
 .search-pg {
+    /* set height only because there isn't enough content to fill the browser height */
     height: 90vh;
     padding: 2%;
     display: flex;
@@ -793,9 +858,13 @@ progress::-moz-progress-bar {
     justify-content: space-between;
 }
 
+.search-results-container {
+    width: 100%;
+}
+
 .search-results-bar {
-    width: 90%;
     display: flex;
+    padding-bottom: 1rem;
 }
 
 .search-results-bar > input {
@@ -832,7 +901,7 @@ progress::-moz-progress-bar {
 }
 
 .dropdown-content button {
-    width: 70%;
+    /* width: 70%; */
     border: none;
     background-color: rgba(103, 102, 102, 0.4);
     border-radius: 1rem;
@@ -844,11 +913,6 @@ progress::-moz-progress-bar {
     background-color: rgba(103, 102, 102, 0.7);
 }
 
-.dropdown-content label {
-    display: inline;
-    font-size: 1.2rem;
-}
-
 .filter-dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
@@ -856,19 +920,8 @@ progress::-moz-progress-bar {
     background-color: rgba(231, 229, 229, 0.9);
 }
 
-.search-results {
-    width: 90%;
-    flex-direction: column;
-    gap: 1rem;
-}
-
 .search-books {
-    grid-template-rows: 40vh;
-    gap: 2.5rem;
-}
-
-.search-books .grid-box img {
-    height: 100%;
+    width: 100%;
 }
 
 .search-nav a {
@@ -996,6 +1049,188 @@ progress::-moz-progress-bar {
 
 /* || MEDIA QUERIES */
 
+/* narrow screens */
+@media screen and (max-width:425px) {
+    /* HEADER */
+    .logo h2 {
+        font-size: 1.25rem;
+    }
+    .logo p {
+        font-size: 1rem;
+    }
+
+    /* HOME */
+    .landing-top p {
+        font-size: 1.75rem;
+    }
+    .landing-contact h2, .landing-contact p {
+        font-size: 1rem;
+    }
+    .landing-img {
+        width: 100%;
+    }
+
+    /* ABOUT US */
+    .about-us main {
+        padding: 1rem;
+    }
+    .about-right div {
+        padding: 0.5rem;
+    }
+
+    /* LOGIN */
+    .sign-in-card .btn {
+        width: 100%;
+    }
+    .password-options {
+        display: block;
+    }
+
+    /* REGISTER */
+    .register .name {
+        flex-direction: column;
+    }
+    .register .name > div, .register .btn {
+        width: 100%;
+    }
+    
+    /* SEARCH */
+    .filter-dropdown {
+        width: 50%;
+    }
+    .search-books {
+        padding: 1rem 2rem;
+    }
+
+    /* BOOK DESCRIPTION & REVIEWS */
+    .book-description, .book-reviews {
+        padding: 1rem;
+    }
+    .right-subtitles h2, .right-subtitles h3 {
+        font-size: 1rem;
+    }
+    .description-middle, .description-bottom {
+        width: 100%;
+    }
+    .description-right h1 {
+        font-size: 1.3rem;
+    }
+    .book-reviews {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 4rem;
+    }
+    .reviews-right-top img {
+        width: 30%;
+    }
+    .book-reviews h1 {
+        font-size: 1.75rem;
+    }
+    .book-reviews h2, .book-reviews h3 {
+        font-size: 1.25rem;
+    }
+    .review-content {
+        width: 100%;
+    }
+
+    /* CHECKOUT */
+    .checkout-grid {
+        display: block;
+    }
+    .checkout-summary h2, .checkout-right .red {
+        font-size: 1.25rem;
+    }
+    .my-cart .serif {
+        font-size: 2rem;
+    }
+    .contact-info, .contact-info .align-right {
+        text-align: center;
+    }
+    .checkout .checkout-btn {
+        width: 80%;
+    }
+
+    /* CONFIRMATION */
+    .confirmation {
+        padding: 0 5%;
+    }
+    .confirmation .serif {
+        font-size: 2rem;
+    }
+    .confirmation h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/* medium width screens */
+@media screen and (min-width: 631px) and (max-width:768px) {
+    .about-left {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ABOUT US */
+    .about-flex {
+        flex-direction: column;
+    }
+    .about-left, .about-right {
+        width: 100%;
+    }
+    .about-left section {
+        margin: 0;
+    }
+    .about-left h2 {
+        font-size: 1.25rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    .overview-menu {
+        display: none;
+    }
+
+    /* BOOKS & MORE */
+    .genre-links li {
+        font-size: 1rem;
+    }
+
+    /* BOOK DESCRIPTION */
+    .book-description {
+        display: block;
+    }
+    .description-left {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+    }
+    .description-left > img {
+        width: 60%;
+    }
+    .rating {
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+    .rating-container form {
+        width: 80%;
+    }
+    .checkout-btn {
+        width: 100%;
+    }
+
+    /* REGISTER */
+    .register form {
+        width: 90%;
+    }
+
+    /* CHECKOUT */
+    .my-cart {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
 @media screen and (max-width: 830px) {
     .header {
         padding: 0 2% 0 0;
@@ -1006,7 +1241,7 @@ progress::-moz-progress-bar {
     .desktop-nav {
         display: none;
     }
-    .header > img {
+    .home-icon {
         display: none;
     }
     .mobile-header {
@@ -1020,20 +1255,70 @@ progress::-moz-progress-bar {
         display: block;
         position: absolute;
     }
+    /* middle of homepage */
+    .landing-middle {
+        flex-wrap: wrap;
+        gap: 0.2rem;
+    }
+    .landing-contact {
+        width: 100%;
+    }
     section.landing-contact > p, .landing-contact div {
         width: 100%;
-        height: inherit;
+    }
+    .landing-bottom h1, .landing-bottom p {
+        width: 100%;
+    }
+
+    /* sign in page */
+    .sign-in-card {
+        width: 90%;
     }
 }
 
-@media screen and (max-width:480px) {
-    .landing-contact h2, .landing-contact p {
-        font-size: 1rem;
+@media screen and (min-width: 426px) and (max-width: 830px) {
+    .landing-img {
+        width: 49.5%;
     }
 }
 
+/* wide screens */
 @media screen and (min-width:831px) and (max-width:980px) {
     .desktop-nav li {
         font-size: 1rem;
     }
 }
+
+@media screen and (min-width: 981px) {
+    .about-left h2 {
+        transition-property: margin-left;
+        transition-duration: 1s;
+    }
+    /* animate left page links on hover */
+    .about-left h2:hover:not(.active) {
+        margin-left: 2rem;
+        color: rgba(20, 22, 74, 1);
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-height: 800px) {
+    .landing-top {
+        font-size: 3rem;
+    }
+    .landing-bottom h1 {
+        width: 70%;
+        font-size: 4rem;
+    }
+    .landing-bottom p {
+        width: 80%;
+        font-size: 2rem;
+    }
+}
+
+/* @media screen and (min-height: 1100px) {
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+} WIP */
